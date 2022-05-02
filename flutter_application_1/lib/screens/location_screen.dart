@@ -50,13 +50,13 @@ class _LocationScreenState extends State<LocationScreen> {
                                 if (snapshot.hasData) {
                                   print(snapshot.data);
                                   return Text(
-                                    'Distance: ' +
+                                    'Distance From User Location ${ld.latitude}, ${ld.longitude} To Destination $lat,$long is ' +
                                         distance.toString() +
                                         ' m or ' +
                                         (distance / 1000).toString() +
                                         ' km',
                                     textAlign: TextAlign.center,
-                                    style: TextStyle(fontSize: 20),
+                                    style: TextStyle(fontSize: 25),
                                   );
                                 } else if (snapshot.data == null) {
                                   return Text('Noooo Time!');

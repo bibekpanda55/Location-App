@@ -44,7 +44,7 @@ Future userLogin(String email, String pass) async {
   } else {
     //print(response.statusCode);
     //print(response.body);
-    throw Exception('Couldn\'t Register');
+    throw Exception('Couldn\'t Login');
   }
 }
 
