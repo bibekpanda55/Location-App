@@ -52,16 +52,20 @@ Future destination() async {
   final access_token = sp.getString('access_token');
   print(access_token);
   final uri = Uri.parse('https://visital.in/test/fluttertest/api/destination');
-  final response = await http.get(
-    uri,
-    headers: <String, String>{'Authorization': 'Bearer $access_token'},
-  );
-  if (response.statusCode == 200 || response.statusCode == 201) {
-    //print(response.body);
-    return Destination.destinationFromJson(response.body);
-  } else {
-    //print(response.body);
-    throw Exception('Couldn\'t load data!');
+  try {
+    final response = await http.get(
+      uri,
+      headers: <String, String>{'Authorization': 'Bearer $access_token'},
+    );
+    if (response.statusCode == 200 || response.statusCode == 201) {
+      //print(response.body);
+      return Destination.destinationFromJson(response.body);
+    } else {
+      print(response.body);
+      throw Exception('Couldn\'t load data!');
+    }
+  } catch (e) {
+    print(e);
   }
 }
 

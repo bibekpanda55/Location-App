@@ -103,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           content: Text('One or more fields are empty!')));
                     }
                   },
-                  child: Text(
+                  child: const Text(
                     'Log In',
                     style: TextStyle(
                         color: Colors.white,
