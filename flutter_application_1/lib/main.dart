@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/bottom.dart';
 import 'package:flutter_application_1/screens/list_widget._screen.dart';
 import 'package:flutter_application_1/screens/location_screen.dart';
 import 'package:flutter_application_1/screens/login_screen.dart';
@@ -24,14 +25,15 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
           scaffoldBackgroundColor: Colors.white, fontFamily: 'LexendDeca'),
-      initialRoute: PieWidget.routeName,
+      initialRoute: BottomWidget.routeName,
       routes: {
         PieWidget.routeName: (_) => PieWidget(),
         ListWidgetScreen.routeName: (_) => ListWidgetScreen(),
         LoginScreen.routeName: (_) => LoginScreen(),
         RegisterScreen.routeName: (_) => RegisterScreen(),
         LocationScreen.routeName: (_) => LocationScreen(),
-        TestWidget.routeName: (_) => TestWidget()
+        TestWidget.routeName: (_) => TestWidget(),
+        BottomWidget.routeName: (_) => BottomWidget()
       },
     );
   }
